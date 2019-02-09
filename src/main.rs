@@ -89,7 +89,7 @@ fn main() -> Result<(), Box<std::error::Error>> {
     );
 
     info!("Serving on http://localhost:{}...", config.port);
-    Iron::new(router).http(SocketAddr::from(([127, 0, 0, 1], config.port as u16)))?;
+    Iron::new(router).http(SocketAddr::from(([0, 0, 0, 0], config.port as u16)))?;
 
     Ok(())
 }
