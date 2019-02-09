@@ -1,0 +1,15 @@
+[package]
+name = "wolwaker"
+version = "0.1.0"
+authors = ["lesnyrumcajs <lesny.rumcajs@gmail.com>"]
+edition = "2018"
+
+[dependencies]
+clap = "2.32.0"
+router = "0.6.0"
+iron = "0.6.0"
+urlencoded = "0.6.0"
+wakey = "0.1.1"
+mime = "0.3.13"
+log = "0.4.6"
+simple_logger = "1.0.1"
