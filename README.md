@@ -12,7 +12,7 @@ Typical use case when you have a single low-energy server (Raspberry PI) online 
 
 #### Create service
 Create new systemd service `/etc/systemd/system/wolwaker.service` with the following content:
-```
+```ini
 [Unit]
 Description=Wolwaker service
 After=network.target
@@ -37,7 +37,7 @@ systemctl enable wolwaker
 
 #### Open the wolwaker port
 Create new service in `/etc/firewalld/services/wolwaker.xml` with the following content:
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <service>
   <short>Wolwaker service</short>
