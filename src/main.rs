@@ -1,23 +1,10 @@
-extern crate clap;
 use clap::{App, Arg};
-
-#[macro_use]
-extern crate log;
-
-extern crate router;
+use iron::{prelude::*, status};
+use log::{info, trace, warn};
 use router::Router;
-
-extern crate iron;
-
-use iron::prelude::*;
-use iron::status;
-
 use std::net::SocketAddr;
-
-extern crate wakey;
-use wakey::WolPacket;
-
 use std::sync::{Arc, Mutex};
+use wakey::WolPacket;
 
 struct Config {
     mac: String,
